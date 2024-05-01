@@ -28,7 +28,16 @@ router.post("/signup", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-
+// get method to get the user data
+router.get("/signup",async function(req,res){
+  try {
+    const data = await User.find();
+    console.log("the data is feteched..");
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({error:"interanl error found."})
+  }
+})
 // Login Route
 router.post("/login", async (req, res) => {
   try {

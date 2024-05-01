@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const condidatesScheme = new mongoose.Schema({
+const candidatesScheme = new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -32,5 +32,5 @@ const condidatesScheme = new mongoose.Schema({
    }
 })
 
-const condidates = mongoose.model('condidates',condidatesScheme);
-module.exports = condidates
+const candidates = mongoose.model('candidates',candidatesScheme);
+module.exports = candidates
